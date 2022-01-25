@@ -156,7 +156,6 @@ export class QuestionsComponent implements OnInit {
   // Modal open and close handler end
 
   public submitQuestion(modal): void {
-    console.log('this.getQuestionFormArray() :>> ', this.getQuestionFormArray());
     this.getQuestionFormArray().push(this.questionForm);
     this.commonService.questionArray = this.getQuestionFormArray().value;
 
@@ -185,7 +184,6 @@ export class QuestionsComponent implements OnInit {
 
   verifyAnswer(id: number) {
     this.commonService.questionArray = this.getQuestionFormArray().value;
-    console.log('this.commonService.questionArray :>> ', this.commonService.questionArray);
-    this.router.navigate(['/verify-answer', id]);
+    this.router.navigate(['/form/answers', id]);
   }
 }

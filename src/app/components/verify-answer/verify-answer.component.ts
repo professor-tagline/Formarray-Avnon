@@ -29,7 +29,6 @@ export class VerifyAnswerComponent implements OnInit {
           .map((data) => data.options)
           .join(', ');
       }
-      console.log('this.answer :>> ', this.answer);
     });
   }
 }
